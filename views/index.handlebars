@@ -1,0 +1,71 @@
+<div class="container">
+
+    <div class="jumbotron">
+        <h1 style="font-weight: 600; text-align: center;"> Menu </h1>
+        <br>
+        <panel>
+            <form class="create-form">
+                <div class="form-group" style="text-align: center;">
+                    <label for="newburger"></label>
+                    <select data-placeholder="" id="newburger" name="burger">
+                        <option value="Nothing Selected">Select a Burger</option>
+                        <option value="Hamburger">Hamburger</option>
+                        <option value="CheeseBurger">Cheese Burger</option>
+                        <option value="ChickenBurger">Chicken Burger</option>
+                        <option value="VeggieBurger">Veggie Burger</option>
+                        <option value="PulledPork">Pulled Pork Sandwich</option>
+                        <option value="BaconBurger">Bacon Cheese Burger</option>
+                    </select>
+                    <button type="submit" class="btn btn-danger" id="addburger">
+                        <i class="fas fa-credit-card"></i>
+                    </button>
+                </div>
+            </form>
+        </panel>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="leftside"><strong>Ordered Burgers</strong>
+                    <p>Click Icon to Devour</p>
+                </div>
+                <div class="panel-body">
+
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+
+                        <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class="devourburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span></span><i class="fas fa-hamburger"></i></button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="rightside"><strong>Devoured Burgers</strong>
+                    <p>Delete an order</p>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class="deleteburger btn btn-danger" id="dumpbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><i class="fas fa-dumpster-fire"></i>
+                        </button>
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

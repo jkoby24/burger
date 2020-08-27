@@ -1,0 +1,39 @@
+.jumbotron {
+  background-image: url('../img/burger.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #000000;
+  color: #dc3545;
+  margin-top: 3%;
+  text-shadow: 2px 2px 4px #fcd644;
+}
+#newburger {
+  color: #5c5c5c;
+}
+#leftside {
+  background-color: #dc3545;
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+}
+
+#rightside {
+  background-color: #fcd644;
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
