@@ -21,7 +21,7 @@ Run `npm install` to download required packages.
 
 ## Usage
 
-Navigate to `localhost:8080/` to get started. You can also view the app on Heroku by [clicking here](https://note-taker-101-1.herokuapp.com 'Visit the app')!
+Navigate to `localhost:8080/` to get started. You can also view the app on Heroku by [clicking here](https://eat-all-burgers.herokuapp.com/ 'Visit the app')!
 
 ![](/public/assets/img/screenshot1.png)
 
