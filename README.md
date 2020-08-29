@@ -1,4 +1,4 @@
-# _Eat_Da_Burger
+# Eat_Da_Burger
 
 ![license shield](https://img.shields.io/badge/License-mit-red.svg)
 
